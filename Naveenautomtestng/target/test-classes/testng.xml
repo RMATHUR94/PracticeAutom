@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestNG Session Test Automation Suite">
+  <test name="Different testng Features Test">
+	  <classes>
+		  <class name ="Testng.ExceptionTimeOutTest"/>
+		  <class name ="Testng.FacebookTest"/>
+		  <class name ="Testng.GoogletitleTest"/>
+		  <class name ="Testng.InvocationCountTest"/>
+		  <class name ="Testng.TestNgFeatures"/>
+	  </classes>
+  </test> 
+</suite> <!-- Suite -->

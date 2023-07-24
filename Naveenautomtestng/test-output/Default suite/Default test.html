@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>21/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 20 17:55:33 IST 2023</td>
+<td>Started on:</td><td>Fri Jul 21 10:43:36 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3942 ms)</td>
+<tr><td>Total time:</td><td>31 seconds (31173 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -74,6 +74,76 @@ function toggleAllBoxes() {
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
+<tr>
+<td title='Testng.ExceptionTimeOutTest.infiniteloopTest()'><b>infiniteloopTest</b><br>Test class: Testng.ExceptionTimeOutTest</td>
+<td><div><pre>org.testng.TestException: 
+Expected exception of type class java.lang.NumberFormatException but got org.testng.internal.thread.ThreadTimeoutException: Method Testng.ExceptionTimeOutTest.infiniteloopTest() didn&apos;t finish within the time-out 2
+	at org.testng.internal.ExpectedExceptionsHolder.wrongException(ExpectedExceptionsHolder.java:68)
+	at org.testng.internal.TestInvoker.considerExceptions(TestInvoker.java:739)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:634)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.testng.internal.thread.ThreadTimeoutException: Method Testng.ExceptionTimeOutTest.infiniteloopTest() didn&apos;t finish within the time-out 2
+	at org.testng.internal.MethodInvocationHelper.invokeWithTimeoutWithNewExecutor(MethodInvocationHelper.java:384)
+	at org.testng.internal.MethodInvocationHelper.invokeWithTimeout(MethodInvocationHelper.java:283)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:604)
+	... 22 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1446301940", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1446301940'><pre>org.testng.TestException: 
+Expected exception of type class java.lang.NumberFormatException but got org.testng.internal.thread.ThreadTimeoutException: Method Testng.ExceptionTimeOutTest.infiniteloopTest() didn&apos;t finish within the time-out 2
+	at org.testng.internal.ExpectedExceptionsHolder.wrongException(ExpectedExceptionsHolder.java:68)
+	at org.testng.internal.TestInvoker.considerExceptions(TestInvoker.java:739)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:634)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.testng.internal.thread.ThreadTimeoutException: Method Testng.ExceptionTimeOutTest.infiniteloopTest() didn&apos;t finish within the time-out 2
+	at org.testng.internal.MethodInvocationHelper.invokeWithTimeoutWithNewExecutor(MethodInvocationHelper.java:384)
+	at org.testng.internal.MethodInvocationHelper.invokeWithTimeout(MethodInvocationHelper.java:283)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:604)
+	... 22 more
+</pre></div></td>
+<td>0</td>
+<td>Testng.ExceptionTimeOutTest@2034b64c</td></tr>
 <tr>
 <td title='Testng.GoogletitleTest.test_title()'><b>test_title</b><br>Test class: Testng.GoogletitleTest</td>
 <td><div><pre>java.lang.AssertionError: title is not matched expected [Google789] but found [Google]
@@ -111,8 +181,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1818592781", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1818592781'><pre>java.lang.AssertionError: title is not matched expected [Google789] but found [Google]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1234435772", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1234435772'><pre>java.lang.AssertionError: title is not matched expected [Google789] but found [Google]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
@@ -149,7 +219,187 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>Testng.GoogletitleTest@51c668e3</td></tr>
+<td>Testng.GoogletitleTest@75d3a5e0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Testng.FacebookTest.test_title()'><b>test_title</b><br>Test class: Testng.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.FacebookTest@4b45a2f5</td></tr>
+<tr>
+<td title='Testng.FacebookTest.googleLogotest()'><b>googleLogotest</b><br>Test class: Testng.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.FacebookTest@4b45a2f5</td></tr>
+<tr>
+<td title='Testng.InvocationCountTest.sum()'><b>sum</b><br>Test class: Testng.InvocationCountTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.InvocationCountTest@58cbafc2</td></tr>
+<tr>
+<td title='Testng.InvocationCountTest.sum()'><b>sum</b><br>Test class: Testng.InvocationCountTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.InvocationCountTest@58cbafc2</td></tr>
+<tr>
+<td title='Testng.FacebookTest.test4()'><b>test4</b><br>Test class: Testng.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.FacebookTest@4b45a2f5</td></tr>
+<tr>
+<td title='Testng.FacebookTest.Linktest()'><b>Linktest</b><br>Test class: Testng.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.FacebookTest@4b45a2f5</td></tr>
+<tr>
+<td title='Testng.ExceptionTimeOutTest.test1()'><b>test1</b><br>Test class: Testng.ExceptionTimeOutTest</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;100A&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at Testng.ExceptionTimeOutTest.test1(ExceptionTimeOutTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace5563134", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace5563134'><pre>java.lang.NumberFormatException: For input string: &quot;100A&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at Testng.ExceptionTimeOutTest.test1(ExceptionTimeOutTest.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>Testng.ExceptionTimeOutTest@2034b64c</td></tr>
+<tr>
+<td title='Testng.InvocationCountTest.sum()'><b>sum</b><br>Test class: Testng.InvocationCountTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.InvocationCountTest@58cbafc2</td></tr>
+<tr>
+<td title='Testng.InvocationCountTest.sum()'><b>sum</b><br>Test class: Testng.InvocationCountTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.InvocationCountTest@58cbafc2</td></tr>
+<tr>
+<td title='Testng.InvocationCountTest.sum()'><b>sum</b><br>Test class: Testng.InvocationCountTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.InvocationCountTest@58cbafc2</td></tr>
+<tr>
+<td title='Testng.TestNgFeatures.RegistationPage()'><b>RegistationPage</b><br>Test class: Testng.TestNgFeatures</td>
+<td></td>
+<td>0</td>
+<td>Testng.TestNgFeatures@1ca3b418</td></tr>
+<tr>
+<td title='Testng.FacebookTest.test6()'><b>test6</b><br>Test class: Testng.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.FacebookTest@4b45a2f5</td></tr>
+<tr>
+<td title='Testng.InvocationCountTest.sum()'><b>sum</b><br>Test class: Testng.InvocationCountTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.InvocationCountTest@58cbafc2</td></tr>
+<tr>
+<td title='Testng.TestNgFeatures.searchpageTest()'><b>searchpageTest</b><br>Test class: Testng.TestNgFeatures</td>
+<td></td>
+<td>0</td>
+<td>Testng.TestNgFeatures@1ca3b418</td></tr>
+<tr>
+<td title='Testng.InvocationCountTest.sum()'><b>sum</b><br>Test class: Testng.InvocationCountTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.InvocationCountTest@58cbafc2</td></tr>
+<tr>
+<td title='Testng.FacebookTest.test5()'><b>test5</b><br>Test class: Testng.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.FacebookTest@4b45a2f5</td></tr>
+<tr>
+<td title='Testng.TestNgFeatures.loginTest()'><b>loginTest</b><br>Test class: Testng.TestNgFeatures</td>
+<td></td>
+<td>0</td>
+<td>Testng.TestNgFeatures@1ca3b418</td></tr>
+<tr>
+<td title='Testng.TestNgFeatures.HomePageTest()'><b>HomePageTest</b><br>Test class: Testng.TestNgFeatures</td>
+<td></td>
+<td>0</td>
+<td>Testng.TestNgFeatures@1ca3b418</td></tr>
+<tr>
+<td title='Testng.InvocationCountTest.sum()'><b>sum</b><br>Test class: Testng.InvocationCountTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.InvocationCountTest@58cbafc2</td></tr>
+<tr>
+<td title='Testng.InvocationCountTest.sum()'><b>sum</b><br>Test class: Testng.InvocationCountTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.InvocationCountTest@58cbafc2</td></tr>
+<tr>
+<td title='Testng.InvocationCountTest.sum()'><b>sum</b><br>Test class: Testng.InvocationCountTest</td>
+<td></td>
+<td>0</td>
+<td>Testng.InvocationCountTest@58cbafc2</td></tr>
 </table><p>
 </body>
 </html>

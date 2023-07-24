@@ -10,6 +10,11 @@
           <include name="Setup"/>
         </methods>
       </class> <!-- Testng.GoogletitleTest -->
+      <class name="Testng.ExceptionTimeOutTest">
+        <methods>
+          <include name="infiniteloopTest"/>
+        </methods>
+      </class> <!-- Testng.ExceptionTimeOutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

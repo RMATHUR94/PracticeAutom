@@ -23,8 +23,9 @@ static XSSFReader reader;
 	  
 	  ArrayList<Object[]> myData = new ArrayList<Object[]>();
 	  
-	  reader = new XSSFReader("/home/vyrazu-66/Documents/Syseclipse/Naveenautomtestng/src/test/java/com/testdata/testdata.xlsx");
-	  
+//	  reader = new XSSFReader();
+      XSSFReader xssfReader = new XSSFReader("/home/vyrazu-66/Documents/Syseclipse/Naveenautomtestng/src/test/java/com/testdata/testdata.xlsx");
+
 	  
 	  
 //	  

@@ -31,7 +31,7 @@ public class GoogletitleTest {
 		System.out.println(title);
 		
 		//Validation
-		Assert.assertEquals(title, "Google789", "title is not matched");
+		Assert.assertEquals(title, "Google", "title is not matched");
 	}
 
 	@AfterMethod

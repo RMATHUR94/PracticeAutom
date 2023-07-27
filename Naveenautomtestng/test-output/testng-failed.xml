@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite2]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ParameterrizeTest(failed)">
-    <parameter name="browser" value="chrome"/>
-    <parameter name="emailid" value="rahul.mathur01@gmail.com"/>
-    <parameter name="url" value="https://login.yahoo.com/?.intl=us"/>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Default suite]">
+  <test parallel="none" name="Default test(failed)" preserve-order="true">
     <classes>
-      <class name="dataDrivenFromXml.ParameterrizeTest">
+      <class name="Testng.ExceptionTimeOutTest">
         <methods>
-          <include name="DatapullFromTextng" invocation-numbers="0"/>
+          <include name="infiniteloopTest"/>
         </methods>
-      </class> <!-- dataDrivenFromXml.ParameterrizeTest -->
+      </class> <!-- Testng.ExceptionTimeOutTest -->
     </classes>
-  </test> <!-- ParameterrizeTest(failed) -->
-</suite> <!-- Failed suite [Suite2] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

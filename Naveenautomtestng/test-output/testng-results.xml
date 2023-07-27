@@ -1,34 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-24T12:17:47 IST" name="Suite2" finished-at="2023-07-24T12:17:52 IST" duration-ms="5354">
+  <suite started-at="2023-07-27T10:54:08Z" name="Default suite" finished-at="2023-07-27T10:54:08Z" duration-ms="31">
     <groups>
     </groups>
-    <test started-at="2023-07-24T12:17:47 IST" name="ParameterrizeTest" finished-at="2023-07-24T12:17:52 IST" duration-ms="5354">
-      <class name="dataDrivenFromXml.ParameterrizeTest">
-        <test-method signature="DatapullFromTextng(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:dataDrivenFromXml.ParameterrizeTest@121314f7]" started-at="2023-07-24T12:17:47 IST" name="DatapullFromTextng" finished-at="2023-07-24T12:17:52 IST" duration-ms="5332" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://login.yahoo.com/?.intl=us]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[rahul.mathur01@gmail.com]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2023-07-27T10:54:08Z" name="Default test" finished-at="2023-07-27T10:54:08Z" duration-ms="31">
+      <class name="Testng.ExceptionTimeOutTest">
+        <test-method signature="infiniteloopTest()[pri:0, instance:Testng.ExceptionTimeOutTest@2f62ea70]" started-at="2023-07-27T16:24:08Z" name="infiniteloopTest" finished-at="2023-07-27T16:24:08Z" duration-ms="15" status="FAIL">
+          <exception class="org.testng.TestException">
+            <message>
+              <![CDATA[
+Expected exception java.lang.NumberFormatException but got org.testng.TestException: 
+Expected exception java.lang.NumberFormatException but got org.testng.internal.thread.ThreadTimeoutException: Method org.testng.internal.TestNGMethod.infiniteloopTest() didn't finish within the time-out 2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestException: 
+Expected exception java.lang.NumberFormatException but got org.testng.TestException: 
+Expected exception java.lang.NumberFormatException but got org.testng.internal.thread.ThreadTimeoutException: Method org.testng.internal.TestNGMethod.infiniteloopTest() didn't finish within the time-out 2
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1503)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1251)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.testng.TestException: 
+Expected exception java.lang.NumberFormatException but got org.testng.internal.thread.ThreadTimeoutException: Method org.testng.internal.TestNGMethod.infiniteloopTest() didn't finish within the time-out 2
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1503)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:764)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	... 16 more
+Caused by: org.testng.internal.thread.ThreadTimeoutException: Method org.testng.internal.TestNGMethod.infiniteloopTest() didn't finish within the time-out 2
+	at java.base@17.0.5/java.lang.String.getChars(String.java:1677)
+	at java.base@17.0.5/java.io.BufferedWriter.write(BufferedWriter.java:229)
+	at java.base@17.0.5/java.io.Writer.write(Writer.java:249)
+	at java.base@17.0.5/java.io.PrintStream.writeln(PrintStream.java:720)
+	at java.base@17.0.5/java.io.PrintStream.println(PrintStream.java:1028)
+	at app//Testng.ExceptionTimeOutTest.infiniteloopTest(ExceptionTimeOutTest.java:13)
+	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.5/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.5/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.5/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at app//org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:46)
+	at app//org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:33)
+	at java.base@17.0.5/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base@17.0.5/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.5/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DatapullFromTextng -->
-      </class> <!-- dataDrivenFromXml.ParameterrizeTest -->
-    </test> <!-- ParameterrizeTest -->
-  </suite> <!-- Suite2 -->
+        </test-method> <!-- infiniteloopTest -->
+        <test-method signature="test1()[pri:0, instance:Testng.ExceptionTimeOutTest@2f62ea70]" started-at="2023-07-27T16:24:08Z" name="test1" finished-at="2023-07-27T16:24:08Z" duration-ms="3" status="PASS">
+          <exception class="java.lang.NumberFormatException">
+            <message>
+              <![CDATA[For input string: "100A"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NumberFormatException: For input string: "100A"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at Testng.ExceptionTimeOutTest.test1(ExceptionTimeOutTest.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:715)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+	at org.testng.TestNG.run(TestNG.java:1030)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NumberFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+      </class> <!-- Testng.ExceptionTimeOutTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

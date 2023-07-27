@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [TestNG Session Test Automation Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Parameterized_Test(failed)">
-    <parameter name="browser" value="chrome"/>
-    <parameter name="emailid" value="rahul.mathur01@gmail.com"/>
-    <parameter name="url" value="https://login.yahoo.com/?.intl=us"/>
-    <classes>
-      <class name="Testng.ParameterrizeTest">
-        <methods>
-          <include name="DatapullFromTextng"/>
-        </methods>
-      </class> <!-- Testng.ParameterrizeTest -->
-    </classes>
-  </test> <!-- Parameterized_Test(failed) -->
-  <test thread-count="5" name="Different testng Features Test(failed)">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [TestNG Session Test Automation Suite]">
+  <test parallel="none" name="Different testng Features Test(failed)" preserve-order="true">
     <classes>
       <class name="Testng.ExceptionTimeOutTest">
         <methods>
           <include name="infiniteloopTest"/>
         </methods>
       </class> <!-- Testng.ExceptionTimeOutTest -->
-      <class name="Testng.GoogletitleTest">
+      <class name="Testng.FacebookTest">
         <methods>
-          <include name="test_title"/>
           <include name="teardown"/>
           <include name="Setup"/>
+        </methods>
+      </class> <!-- Testng.FacebookTest -->
+      <class name="Testng.GoogletitleTest">
+        <methods>
+          <include name="Setup"/>
+          <include name="test_title"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- Testng.GoogletitleTest -->
     </classes>

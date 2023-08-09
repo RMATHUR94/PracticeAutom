@@ -10,17 +10,20 @@ import com.crm.qa.base.TestBase;
 public class LoginPage extends TestBase {
 	 
 	 //Page Factory - OR -- PageLib
-      @FindBy(name = "email")
-      WebElement emailId ;
+      @FindBy(name = "username")
+      WebElement username ;
      
       @FindBy(name = "password")
       WebElement Password ;
       
-      @FindBy(xpath = "//div[@class='ui fluid large blue submit button']")
+      @FindBy(xpath = "//input[@value='Login']")
       WebElement LoginBtn;
       
       @FindBy(linkText = "Sign Up")
       WebElement SignUp;
+      
+      @FindBy(xpath = "//img[@alt='Free CRM Software for customer relationship management, sales and support']")
+      WebElement crmLogo;
       
       public LoginPage()
       {
@@ -33,9 +36,14 @@ public class LoginPage extends TestBase {
     	 
       }
       
+      public boolean validateCRMImage()
+      {
+    	 return crmLogo.isDisplayed();
+      }
+      
       public HomePage Login(String un , String pas)
       {
-    	  emailId.sendKeys(un);
+    	  username.sendKeys(un);
     	  
     	  Password.sendKeys(pas);
     	  LoginBtn.click();

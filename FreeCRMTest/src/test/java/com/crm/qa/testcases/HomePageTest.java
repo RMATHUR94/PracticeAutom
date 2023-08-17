@@ -11,57 +11,53 @@ import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtil;
 
-public class HomePageTest extends TestBase{
+public class HomePageTest extends TestBase {
 
-	LoginPage loginPage; 
+	LoginPage loginPage;
 	HomePage HomePage;
 	TestUtil testUtil;
 	ContactsPage contactPage;
-	
-	public HomePageTest()
-	{
+
+	public HomePageTest() {
 		super();
 	}
-	//Test cases should be separated -- independent with each other
-	//before each test case launch the browser and login
-	//@test -- execute test case
-	//after each testcase close the browser
+
+	// Test cases should be separated -- independent with each other
+	// before each test case launch the browser and login
+	// @test -- execute test case
+	// after each testcase close the browser
 	@BeforeMethod
-	public void setup()
-	{
+	public void setup() {
 		initialization();
 		testUtil = new TestUtil();
 		loginPage = new LoginPage();
 		contactPage = new ContactsPage();
 		HomePage = loginPage.Login(prop.getProperty("username2"), prop.getProperty("password"));
 	}
-	
+
 	@Test(priority = 1)
-	public void verifyHomePageTitleTest()
-	{
+	public void verifyHomePageTitleTest() {
 		String homePageTitle = HomePage.verifyHomePageTitle();
-		Assert.assertEquals(homePageTitle, "CRMPRO","Home page title not matched");
+		Assert.assertEquals(homePageTitle, "CRMPRO", "Home page title not matched");
 	}
-	
+
 	@Test(priority = 2)
-	public void verifyUserNameTest()
-	{
+	public void verifyUserNameTest() {
 		testUtil.switchToFrame();
 		boolean flag = HomePage.verifyUserName();
 		Assert.assertTrue(flag);
 	}
-	
+
 	@Test(priority = 3)
-	public void verifyCOntactsLinkTest()
-	{
+	public void verifyCOntactsLinkTest() {
 		testUtil.switchToFrame();
 		contactPage = HomePage.clickOnContactsPage();
-		 
+
 	}
-	
+
 	@AfterMethod
 	public void tearDown() {
-	      driver.quit();;
-		}
+		driver.quit();
+	}
 
 }

@@ -13,19 +13,17 @@ import com.crm.qa.util.TestUtil;
 
 public class ContactsPageTest extends TestBase {
 
-	LoginPage loginPage; 
+	LoginPage loginPage;
 	HomePage HomePage;
 	TestUtil testUtil;
 	ContactsPage contactPage;
-	
-	public ContactsPageTest()
-	{
+
+	public ContactsPageTest() {
 		super();
 	}
-	
+
 	@BeforeMethod
-	public void setup()
-	{
+	public void setup() {
 		initialization();
 		testUtil = new TestUtil();
 		loginPage = new LoginPage();
@@ -34,18 +32,15 @@ public class ContactsPageTest extends TestBase {
 		testUtil.switchToFrame();
 		contactPage = HomePage.clickOnContactsPage();
 	}
-	
-	@Test(priority =1)
-	public void verifyContactsPageLabel()
-	{
+
+	@Test(priority = 1)
+	public void verifyContactsPageLabel() {
 		boolean flag = contactPage.vefifyContactsLabel();
-		Assert.assertTrue(flag,"contacts lebel is mission on the page");
+		Assert.assertTrue(flag, "contacts lebel is mission on the page");
 	}
-	
-	
 
 	@AfterMethod
 	public void tearDown() {
-	      driver.quit();;
-		}
+		driver.quit();
+	}
 }

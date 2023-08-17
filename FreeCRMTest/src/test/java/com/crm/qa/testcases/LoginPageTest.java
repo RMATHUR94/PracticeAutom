@@ -13,8 +13,9 @@ public class LoginPageTest extends TestBase {
 
 	LoginPage loginPage;
 	HomePage homePage;
+
 	public LoginPageTest() {
-		super(); // for calling super callss constractor for prop file
+		super(); // for calling super calls constractor for prop file
 	}
 
 	@BeforeMethod
@@ -23,28 +24,28 @@ public class LoginPageTest extends TestBase {
 		loginPage = new LoginPage();
 	}
 
-	@Test(priority=1)
-	public void loginPageTitleTest()
-	{
+	@Test(priority = 1)
+	public void loginPageTitleTest() {
 		String title = loginPage.validateLoginPageTitle();
 		Assert.assertEquals(title, "Free CRM software for customer relationship management, sales, and support.");
 	}
-	@Test(priority=2)
-	public void crmLogoImageTest()
-	{
+
+	@Test(priority = 2)
+	public void crmLogoImageTest() {
 		boolean flag = loginPage.validateCRMImage();
 		Assert.assertTrue(flag);
 	}
-	@Test(priority=3)
-	public void loginTest()
-	{
+
+	@Test(priority = 3)
+	public void loginTest() {
 		homePage = loginPage.Login(prop.getProperty("username2"), prop.getProperty("password"));
-		
+
 	}
-	
+
 	@AfterMethod
 	public void tearDown() {
-      driver.quit();;
+		driver.quit();
+		;
 	}
 
 }

@@ -32,7 +32,7 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
-	@Test
+	
 	public static void initialization()
 	{
 		String browserName = prop.getProperty("browser");

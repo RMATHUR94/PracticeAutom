@@ -38,6 +38,13 @@ public class ContactsPageTest extends TestBase {
 		boolean flag = contactPage.vefifyContactsLabel();
 		Assert.assertTrue(flag, "contacts lebel is mission on the page");
 	}
+	@Test(priority=4)
+	public void validateCreateNewContact()
+	{
+		HomePage.clikcOnNewContactsLink();
+		contactPage.createNewContact("Mr.", "Tom", "Peter", "Google");
+		
+	}
 
 	@AfterMethod
 	public void tearDown() {

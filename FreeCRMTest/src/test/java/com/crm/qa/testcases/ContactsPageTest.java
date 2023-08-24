@@ -1,8 +1,10 @@
 package com.crm.qa.testcases;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
@@ -18,6 +20,8 @@ public class ContactsPageTest extends TestBase {
 	TestUtil testUtil;
 	ContactsPage contactPage;
 
+	String sheetName = "contacts"; 
+	
 	public ContactsPageTest() {
 		super();
 	}
@@ -38,11 +42,23 @@ public class ContactsPageTest extends TestBase {
 		boolean flag = contactPage.vefifyContactsLabel();
 		Assert.assertTrue(flag, "contacts lebel is mission on the page");
 	}
-	@Test(priority=4)
-	public void validateCreateNewContact()
+	
+	@DataProvider
+	public Object[][] GetCrmTestData() throws InvalidFormatException
 	{
+		Object data[][] = testUtil.getTestData(sheetName);
+		return data;
+	}
+	
+	
+	
+	@Test(priority=2, dataProvider = "GetCrmTestData")
+	public void validateCreateNewContact(String title , String firstname , String lastname , String company) throws InterruptedException
+	{
+		testUtil.switchToFrame();
 		HomePage.clikcOnNewContactsLink();
-		contactPage.createNewContact("Mr.", "Tom", "Peter", "Google");
+		//contactPage.createNewContact("Mr.", "Tom", "Peter", "Google");
+		contactPage.createNewContact(title, firstname, lastname, company);
 		
 	}
 

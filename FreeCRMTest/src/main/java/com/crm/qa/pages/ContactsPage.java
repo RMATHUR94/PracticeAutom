@@ -10,7 +10,7 @@ import com.crm.qa.base.TestBase;
 
 public class ContactsPage extends TestBase{
 
-	@FindBy(xpath = "td[contains(text(),'Contacts')]")
+	@FindBy(xpath = "//td[contains(text(),'Contacts')]")
 	WebElement contactsLabel;	
 	
 	@FindBy(id = "first_name")
@@ -22,7 +22,7 @@ public class ContactsPage extends TestBase{
 	@FindBy(name = "client_lookup")
 	WebElement companyName;
 	
-	@FindBy(xpath = "//input[@type='submit' and value ='Save']")
+	@FindBy(xpath = "//input[@type='submit' and @value='Save']")
 	WebElement saveBtn;
 	
 	
@@ -36,6 +36,7 @@ public class ContactsPage extends TestBase{
 		return contactsLabel.isDisplayed();
 	}
 	
+	//working correctly
 	public void createNewContact(String title,String ftname,String ltName, String comname)
 	{
 		Select select = new Select(driver.findElement(By.name("title")));

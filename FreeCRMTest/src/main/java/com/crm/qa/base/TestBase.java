@@ -9,16 +9,18 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Test;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.crm.qa.util.TestUtil;
+import com.crm.qa.util.WebEventListener;
 
 public class TestBase {
 
 	public static WebDriver driver;
 
 	public static Properties prop;
-
+	public  static EventFiringWebDriver e_driver;
+	public static WebEventListener eventListener;
 	
 	public TestBase() {
 		try {
@@ -50,6 +52,11 @@ public class TestBase {
 					"/home/vyrazu-66/Downloads/chromedriver_linux64/chromedriver");
 			driver = new FirefoxDriver();
 		}
+		
+		//creating object of eventfiring object
+		e_driver = new EventFiringWebDriver(driver);
+		// Now create object of EventListerHandler to register it with EventFiringWebDriver
+	    eventListener = new WebEventListener();
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

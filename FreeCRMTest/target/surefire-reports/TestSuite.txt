@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 3, Errors: 0, Skipped: 5, Time elapsed: 287.13 s <<< FAILURE! - in TestSuite
+validateCreateNewContact(com.crm.qa.testcases.ContactsPageTest)  Time elapsed: 40.05 s  <<< FAILURE!
+org.openqa.selenium.NoSuchFrameException: 
+No frame element found by name or id mainpanel
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'vyrazu66-ThinkCentre-M70t', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-32-generic', java.version: '17.0.5'
+Driver info: driver.version: unknown
+	at com.crm.qa.testcases.ContactsPageTest.validateCreateNewContact(ContactsPageTest.java:58)
+
+setup(com.crm.qa.testcases.ContactsPageTest)  Time elapsed: 61.413 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username']"}
+  (Session info: chrome=114.0.5735.133)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'vyrazu66-ThinkCentre-M70t', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-32-generic', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.133, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /tmp/.com.google.Chrome.faAAVy}, goog:chromeOptions: {debuggerAddress: localhost:35883}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 842f03359a244aada81be7025e3b1394
+*** Element info: {Using=name, value=username}
+	at com.crm.qa.testcases.ContactsPageTest.setup(ContactsPageTest.java:35)
+
+verifyUserNameTest(com.crm.qa.testcases.HomePageTest)  Time elapsed: 20.068 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"td[contains(text(),'User: Remz Martinez')]"}
+  (Session info: chrome=114.0.5735.133)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'vyrazu66-ThinkCentre-M70t', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-32-generic', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.133, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /tmp/.com.google.Chrome.kWWqSo}, goog:chromeOptions: {debuggerAddress: localhost:40953}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2118a06cd236369719714a649d73b1f
+*** Element info: {Using=xpath, value=td[contains(text(),'User: Remz Martinez')]}
+	at com.crm.qa.testcases.HomePageTest.verifyUserNameTest(HomePageTest.java:47)
+

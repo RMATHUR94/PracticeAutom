@@ -17,7 +17,7 @@ public class App {
 	
   WebDriver driver = new ChromeDriver();
   
-  driver.get("https://deploy-preview-40--aidby-app.netlify.app/login");
+  driver.get("https://app.aidby.com/login");
   
   driver.manage().window().maximize();
   

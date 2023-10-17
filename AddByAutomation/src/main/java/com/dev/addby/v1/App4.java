@@ -19,10 +19,10 @@ public class App4 {
 
 		WebDriver driver = new ChromeDriver();
 
-		driver.get("https://app.aidby.com/login");
+		driver.get("https://aidby-app.netlify.app/login");
 		driver.manage().window().maximize();
-		driver.findElement(By.name("email")).sendKeys("cust1@yopmail.com");
-		driver.findElement(By.name("password")).sendKeys("Cust@123");
+		driver.findElement(By.name("email")).sendKeys("anil.mahta01@yopmail.com");
+		driver.findElement(By.name("password")).sendKeys("Test@1234");
 		driver.findElement(By.xpath("//button[@type='submit']//div[@class='mantine-1wpc1xj mantine-Button-inner']"))
 				.click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

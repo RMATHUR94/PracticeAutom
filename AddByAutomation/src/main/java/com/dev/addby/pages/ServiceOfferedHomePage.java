@@ -1,5 +1,8 @@
 package com.dev.addby.pages;
 
-public class ServiceOfferedHomePage {
+import com.dev.addby.base.TestBase;
 
+public class ServiceOfferedHomePage extends TestBase{
+
+	
 }

@@ -29,9 +29,6 @@ public class App4 {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,350)", "");
 
-//		driver.findElement(By.cssSelector(
-//				"button[class='mantine-UnstyledButton-root mantine-Button-root mantine-1330g2d'] span[class='mantine-1ryt1ht mantine-Button-label']"))
-//				.click();
 
 		List<WebElement> servicesView = driver.findElements(
 				By.xpath("//div[@class='mantine-Container-root mantine-a3uu5s']//button[@type='button']"));

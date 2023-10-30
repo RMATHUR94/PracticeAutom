@@ -1,5 +1,8 @@
 package com.dev.addby.pages;
 
-public class MyBookingPage {
+import com.dev.addby.base.TestBase;
+
+public class MyBookingPage extends TestBase
+{
 
 }

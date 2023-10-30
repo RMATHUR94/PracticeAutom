@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.dev.addby.base.TestBase;
-import com.dev.addby.pages.ServiceOfferedHomePage;
 
 public class LoginPage extends TestBase{
 
@@ -16,7 +15,7 @@ public class LoginPage extends TestBase{
 	@FindBy(name = "password")
 	WebElement password;
 	
-	@FindBy(xpath = "//img[@alt='Free CRM Software for customer relationship management, sales and support']")
+	@FindBy(xpath = "//button[@type='submit']//div[@class='mantine-1wpc1xj mantine-Button-inner']")
 	WebElement LoginBtn;
 	
 	public LoginPage()
@@ -28,7 +27,7 @@ public class LoginPage extends TestBase{
 	{
 		Email.sendKeys(un);
 		password.sendKeys(pa);
-		
+		LoginBtn.click();	
 		return new ServiceOfferedHomePage();
 	}
 }

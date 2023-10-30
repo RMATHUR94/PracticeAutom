@@ -1,0 +1,7 @@
+package com.dev.addby.pages;
+
+import com.dev.addby.base.TestBase;
+
+public class UserBookingPage extends TestBase{
+
+}

@@ -1,5 +1,8 @@
 package com.dev.addby.pages;
 
-public class MyProfilePage {
+import com.dev.addby.base.TestBase;
+
+public class MyProfilePage extends TestBase
+{
 
 }

@@ -28,7 +28,7 @@ public class LoginPagetest extends TestBase{
 	@Test(priority =1)
 	public void loginTest()
 	{
-		serviceofferhomepage = loginpage.login(prop.getProperty(prop.getProperty("username")),prop.getProperty("password"));
+		serviceofferhomepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 //	@AfterMethod
 //	public void tearDown()

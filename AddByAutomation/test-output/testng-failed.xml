@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.dev.addby.testcases.ServiceListingTest">
+      <class name="com.dev.addby.testcases.UserProfilePageTest">
         <methods>
-          <include name="ViewUserprofile"/>
+          <include name="UserBookNow"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.dev.addby.testcases.ServiceListingTest -->
+      </class> <!-- com.dev.addby.testcases.UserProfilePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

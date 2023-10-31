@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-30T19:52:19 IST" name="Default suite" finished-at="2023-10-30T19:52:29 IST" duration-ms="9937">
+  <suite started-at="2023-10-31T20:01:34 IST" name="Default suite" finished-at="2023-10-31T20:01:45 IST" duration-ms="11356">
     <groups>
     </groups>
-    <test started-at="2023-10-30T19:52:19 IST" name="Default test" finished-at="2023-10-30T19:52:29 IST" duration-ms="9937">
-      <class name="com.dev.addby.testcases.ServiceListingTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.dev.addby.testcases.ServiceListingTest@3ee37e5a]" started-at="2023-10-30T19:52:19 IST" name="setup" finished-at="2023-10-30T19:52:28 IST" duration-ms="8649" status="PASS">
+    <test started-at="2023-10-31T20:01:34 IST" name="Default test" finished-at="2023-10-31T20:01:45 IST" duration-ms="11356">
+      <class name="com.dev.addby.testcases.UserProfilePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.dev.addby.testcases.UserProfilePageTest@3ee37e5a]" started-at="2023-10-31T20:01:34 IST" name="setup" finished-at="2023-10-31T20:01:44 IST" duration-ms="10292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ViewUserprofile()[pri:0, instance:com.dev.addby.testcases.ServiceListingTest@3ee37e5a]" started-at="2023-10-30T19:52:28 IST" name="ViewUserprofile" finished-at="2023-10-30T19:52:29 IST" duration-ms="1249" status="PASS">
+        <test-method signature="UserBookNow()[pri:0, instance:com.dev.addby.testcases.UserProfilePageTest@3ee37e5a]" started-at="2023-10-31T20:01:44 IST" name="UserBookNow" finished-at="2023-10-31T20:01:45 IST" duration-ms="1027" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ViewUserprofile -->
-      </class> <!-- com.dev.addby.testcases.ServiceListingTest -->
+        </test-method> <!-- UserBookNow -->
+      </class> <!-- com.dev.addby.testcases.UserProfilePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

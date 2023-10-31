@@ -30,7 +30,7 @@ public class App5 {
 		js.executeScript("window.scrollBy(0,350)", "");
         
 
-		WebDriverWait wait = new WebDriverWait (driver, 15);
+		WebDriverWait wait = new WebDriverWait (driver, 25);
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='mantine-Container-root mantine-a3uu5s']//button[@type='button'])[2]")));
 		element.click();
 		
@@ -50,7 +50,35 @@ public class App5 {
 					By.xpath("//a[@class='mantine-UnstyledButton-root mantine-Button-root mantine-xe2rme']")));
 		}
 		
+//            String MonthYear = driver.findElement(By.cssSelector(".mantine-UnstyledButton-root.mantine-CalendarHeader-calendarHeaderLevel.mantine-DatePicker-calendarHeaderLevel.mantine-ooo895")).getText();		
+//            System.out.println(MonthYear);
+//            
+//            String month = MonthYear.split(" ")[0];
+//            String year =  MonthYear.split(" ")[1];
+//            System.out.println(month);
+//            System.out.println(year);
+//   
+//            while(!(month.equals("December") && year.equals("2023")))
+//            {
+//            	WebElement CalendarNextbtn = driver
+//						.findElement(By.xpath("//button[@data-next='true']//*[name()='svg']"));
+//            	WebDriverWait waittwo = new WebDriverWait(driver, 30);
+//            	CalendarNextbtn.click();
+//				String MonthYeartwo = driver.findElement(By.cssSelector(".mantine-UnstyledButton-root.mantine-CalendarHeader-calendarHeaderLevel.mantine-DatePicker-calendarHeaderLevel.mantine-ooo895")).getText();
+//				String monthtwo = MonthYeartwo.split(" ")[0];
+//	            String yeartwo =  MonthYeartwo.split(" ")[1];
+//            } 
+		 
+		//UserBooking Page
+		 WebElement BookServiceTime = driver.findElement(By.cssSelector("input[placeholder='Book Service']"));
+		 // wait.until(ExpectedConditions.elementToBeClickable(BookServiceTime)).click();
+		  BookServiceTime.click();
+		  Thread.sleep(2000);
+		  driver.findElement(By.xpath("//*[text()='For now']")).click();
+		  driver.findElement(By.xpath("//ul[@class='mantine-1n60cd']//li[5]")).click();
+		  
+      }
 	
 	}
+ 
 
-}

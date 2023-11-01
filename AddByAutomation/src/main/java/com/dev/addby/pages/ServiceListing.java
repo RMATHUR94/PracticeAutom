@@ -12,7 +12,7 @@ public class ServiceListing extends TestBase
 {
 	//Mike Francis lewis profile
 	@FindBy(xpath = "(//a[@type='button'])[1]")
-	WebElement ViewProfile_MikeFrancislewis;
+	WebElement firstListProfileResult;
 	
 	@FindBy(xpath = "//a[@class='mantine-UnstyledButton-root mantine-Button-root mantine-xe2rme']")
 	WebElement Booknowbtn;
@@ -25,7 +25,7 @@ public class ServiceListing extends TestBase
 	public UserProfilePage UserViewProfile()
 	{
 		WebDriverWait wait = new WebDriverWait (driver, 15);
-		wait.until(ExpectedConditions.elementToBeClickable(ViewProfile_MikeFrancislewis)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(firstListProfileResult)).click();
 		return new UserProfilePage();	
 	}
 	

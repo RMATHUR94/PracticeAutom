@@ -94,7 +94,7 @@ public class App5 {
 		String BookingTimeStamp = driver.findElement(By.xpath("(//div[@class='mantine-Text-root mantine-1nx2p9j'])[1]")).getText();
 		System.out.println(BookingTimeStamp);
 		//clicking the procedd to payment button
-		//driver.findElement(By.xpath("//*[text()='Proceed to Payment']")).click();
+		driver.findElement(By.xpath("//*[text()='Proceed to Payment']")).click();
 		
 
 	}

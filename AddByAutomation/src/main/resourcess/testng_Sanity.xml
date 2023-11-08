@@ -3,8 +3,9 @@
 <suite name="Aidby app test Automation Suite">
   <test  name="Free Aidby App Test Cases">
     <classes>
-      <class name="com.dev.addby.testcases.LoginPagetest"/>
-      <class name="com.dev.addby.testcases.ServiceOfferedHomePageTest"/>
+      <!--<class name="com.dev.addby.testcases.LoginPagetest"/>
+      <class name="com.dev.addby.testcases.ServiceOfferedHomePageTest"/>-->
+       <class name="com.dev.addby.testcases.UserPaymentPageTest"/>
     </classes>
   </test> 
 </suite> 

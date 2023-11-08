@@ -1,2 +1,6 @@
-com/dev/addby/v1/AppTest.class
+com/dev/addby/testcases/UserProfilePageTest.class
+com/dev/addby/testcases/UserBookingPageTest.class
 com/dev/addby/testcases/LoginPagetest.class
+com/dev/addby/testcases/ServiceListingTest.class
+com/dev/addby/testcases/UserPaymentPageTest.class
+com/dev/addby/testcases/ServiceOfferedHomePageTest.class

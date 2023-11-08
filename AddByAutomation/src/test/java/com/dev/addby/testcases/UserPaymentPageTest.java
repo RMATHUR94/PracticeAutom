@@ -1,6 +1,6 @@
 package com.dev.addby.testcases;
 
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.dev.addby.base.TestBase;
@@ -11,6 +11,7 @@ import com.dev.addby.pages.UserBookingPage;
 import com.dev.addby.pages.UserPaymentPage;
 import com.dev.addby.pages.UserProfilePage;
 
+
 public class UserPaymentPageTest extends TestBase {
 
 	LoginPage loginpage;
@@ -18,28 +19,35 @@ public class UserPaymentPageTest extends TestBase {
 	ServiceListing servicelistpage;
 	UserProfilePage userprofile;
 	UserBookingPage userbookingpage;
-	UserPaymentPage userpaymentPage;
+	UserPaymentPage userpaymentPage ;
 
 	public UserPaymentPageTest() {
 		super();
 	}
 
-	@BeforeMethod
-	public void setup() {
+	@BeforeTest	
+	public void setup() throws InterruptedException {
 		initialization();
 		loginpage = new LoginPage();
 		servicelistpage = new ServiceListing();
-		userprofile = new UserProfilePage();
+		userprofile     = new UserProfilePage();
 		userbookingpage = new UserBookingPage();
+		userpaymentPage = new UserPaymentPage() ;
 
 		serviceofferhomepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 		servicelistpage = serviceofferhomepage.SelectCookingService();
-		userprofile = servicelistpage.UserViewProfile();
+		userprofile     = servicelistpage.UserViewProfile();
 		userbookingpage = userprofile.UserBook();
+		userpaymentPage = userbookingpage.BookingServiceForNow();
 	}
 
 	@Test
-	public void BookingServiceForNowTest() {
-	   userpaymentPage.ProceedToPaymentTest();
+	public  UserPaymentPage ProceedToPaymentTest() {
+		
+		return userpaymentPage.ProceedToPayment();
 	}
 }
+
+	
+	
+	

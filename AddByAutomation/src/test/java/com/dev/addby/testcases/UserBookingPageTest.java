@@ -1,7 +1,5 @@
 package com.dev.addby.testcases;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,7 +8,10 @@ import com.dev.addby.pages.LoginPage;
 import com.dev.addby.pages.ServiceListing;
 import com.dev.addby.pages.ServiceOfferedHomePage;
 import com.dev.addby.pages.UserBookingPage;
+import com.dev.addby.pages.UserPaymentPage;
 import com.dev.addby.pages.UserProfilePage;
+
+
 
 public class UserBookingPageTest extends TestBase{
 
@@ -19,6 +20,7 @@ public class UserBookingPageTest extends TestBase{
 	ServiceListing servicelistpage;
 	UserProfilePage userprofile;
 	UserBookingPage userbookingpage;
+	
 	
 	public UserBookingPageTest()
 	{
@@ -29,9 +31,11 @@ public class UserBookingPageTest extends TestBase{
 	public void setup() {
 		initialization();
 		loginpage = new LoginPage();
+		serviceofferhomepage = new ServiceOfferedHomePage();
 		servicelistpage = new ServiceListing();
 		userprofile = new UserProfilePage();
 		userbookingpage = new UserBookingPage();
+		
 
 		serviceofferhomepage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 		servicelistpage = serviceofferhomepage.SelectCookingService();
@@ -41,14 +45,16 @@ public class UserBookingPageTest extends TestBase{
 	}
 	
 	@Test
-	public void UserBookingServiceForNowTest() throws InterruptedException
+	public UserPaymentPage UserBookingServiceForNowTest() throws InterruptedException
 	{
 		userbookingpage.BookingServiceForNow();
+
+		return new UserPaymentPage();
 	}
 	
-	@AfterMethod
-	public void tearDown()
-	{
-		driver.quit();
-	}
+//	@AfterMethod
+//	public void tearDown()
+//	{
+//		driver.quit();
+//	}
 }

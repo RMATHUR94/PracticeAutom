@@ -1,8 +1,7 @@
 package com.dev.addby.testcases;
 
-import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.dev.addby.base.TestBase;
@@ -24,7 +23,7 @@ public class UserProfilePageTest extends TestBase {
 		super();
 	}
 
-	@BeforeMethod
+	@BeforeClass
 	public void setup() {
 		initialization();
 		loginpage = new LoginPage();

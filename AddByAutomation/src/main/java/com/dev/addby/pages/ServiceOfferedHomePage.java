@@ -1,9 +1,5 @@
 package com.dev.addby.pages;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -14,6 +10,7 @@ import com.dev.addby.base.TestBase;
 
 public class ServiceOfferedHomePage extends TestBase {
 	// Page Factory - OR -- PageLib
+	
 	@FindBy(xpath = "(//div[@class='mantine-Container-root mantine-a3uu5s']//button[@type='button'])[2]")
 	WebElement Cookingviewall;
 

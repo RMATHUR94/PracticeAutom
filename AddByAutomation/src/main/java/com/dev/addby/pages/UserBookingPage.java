@@ -3,6 +3,8 @@ package com.dev.addby.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.dev.addby.base.TestBase;
 
@@ -31,7 +33,8 @@ public class UserBookingPage extends TestBase{
 	
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement BookNowBtn;
-	//button[@type='submit']
+	
+	
 	public UserBookingPage()
 	{
 		PageFactory.initElements(driver, this);
@@ -39,12 +42,28 @@ public class UserBookingPage extends TestBase{
 	
 	public UserPaymentPage BookingServiceForNow() throws InterruptedException
 	{
-		BookServiceTime.click();
-		Thread.sleep(2000);
-		ForNow.click();
-		TimeSlotsevenToeight.click();
-		BookNowBtn.click();
-		return new UserPaymentPage();
+		 BookServiceTime.click();
+		 Thread.sleep(2000);
+		
+		/*
+		 * WebDriverWait wait = new WebDriverWait(driver , 10);
+		 * 
+		 * wait.until(ExpectedConditions.elementToBeClickable(ForNow));
+		 */
+		
+		  ForNow.click();
+		
+		  WebDriverWait wait = new WebDriverWait(driver,10); //all waits are newly added
+		  
+		  wait.until(ExpectedConditions.elementToBeClickable(TimeSlotTwoToThree)).click(); 
+		 
+		  //TimeSlotTwoToThree.click();
+		    wait.until(ExpectedConditions.elementToBeClickable(BookNowBtn)).click();
+		  //BookNowBtn.click();
+		
+		  return new UserPaymentPage();
+	    
 		
 	}
+	
 }

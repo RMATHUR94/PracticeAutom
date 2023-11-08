@@ -14,6 +14,9 @@ public class ServiceListing extends TestBase
 	@FindBy(xpath = "(//a[@type='button'])[1]")
 	WebElement firstListProfileResult;
 	
+	@FindBy(xpath = "(//a[@type='button'])[3]")
+	WebElement SecondListProfileResult;
+	
 	@FindBy(xpath = "//a[@class='mantine-UnstyledButton-root mantine-Button-root mantine-xe2rme']")
 	WebElement Booknowbtn;
 	
@@ -25,7 +28,7 @@ public class ServiceListing extends TestBase
 	public UserProfilePage UserViewProfile()
 	{
 		WebDriverWait wait = new WebDriverWait (driver, 15);
-		wait.until(ExpectedConditions.elementToBeClickable(firstListProfileResult)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(SecondListProfileResult)).click();
 		return new UserProfilePage();	
 	}
 	

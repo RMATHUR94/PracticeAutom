@@ -1,5 +1,6 @@
 package com.dev.addby.v1;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -76,25 +77,45 @@ public class App5 {
 		BookServiceTime.click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[text()='For now']")).click();
-		driver.findElement(By.xpath("//ul[@class='mantine-1n60cd']//li[5]")).click();
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
-
-		// Payment page
-		//bookingSlotTime
-//		String BookingTime = driver.findElement(By.xpath("//div[@class='mantine-Text-root mantine-1nx2p9j']")).getText();
-//	    System.out.println(BookingTime);
-//		SoftAssert softAssert = new SoftAssert();
-//		softAssert.assertEquals(BookingTime, BookingTime, BookingTime)
-		//clicking on payment button
+	   //Selection : on list of times	
+	
+		List<WebElement> SelectTime = driver.findElements(By.xpath("//ul[@class='mantine-1n60cd']//li"));
 		
-		//Catch the Toptext.
-		String PaymentstatusTop = driver.findElement(By.xpath("//h2[@class='mantine-Text-root mantine-Title-root mantine-1a272oh']")).getText();
-		System.out.println(PaymentstatusTop);
-		//catch the Booking Time
-		String BookingTimeStamp = driver.findElement(By.xpath("(//div[@class='mantine-Text-root mantine-1nx2p9j'])[1]")).getText();
-		System.out.println(BookingTimeStamp);
-		//clicking the procedd to payment button
-		driver.findElement(By.xpath("//*[text()='Proceed to Payment']")).click();
+		for(WebElement j : SelectTime)
+		{
+			System.out.println(j.getText());
+//			System.out.println(j.isEnabled());
+			System.out.println(j.getAttribute("disabled"));
+			String btnstatus = j.getAttribute("disabled");
+			if(btnstatus == "null")
+			{
+				j.click();
+				break;
+			}
+			
+			
+		}
+	//Exp	
+	
+	
+	  driver.findElement(By.xpath("//ul[@class='mantine-1n60cd']//li[5]")).click();
+	  driver.findElement(By.xpath("//button[@type='submit']")).click();
+	  
+	  
+	  //Catch the Toptext
+	  String PaymentstatusTop = driver.findElement(By.xpath("//h2[@class='mantine-Text-root mantine-Title-root mantine-1a272oh']")) .getText(); 
+	 
+	  System.out.println(PaymentstatusTop); //catch the Booking Time
+	  
+	  String BookingTimeStamp = driver.findElement(By.
+	  xpath("(//div[@class='mantine-Text-root mantine-1nx2p9j'])[1]")).getText();
+	  
+	  System.out.println(BookingTimeStamp); 
+	  
+	  //clicking the procedd to payment button
+	  
+	  driver.findElement(By.xpath("//*[text()='Proceed to Payment']")).click();
+	 
 		
 
 	}
